@@ -1,0 +1,39 @@
+.button{
+    position: relative;
+    background:linear-gradient(to right, #ffb600, #fff600, #a5ff00, #15acf8);
+    color: white;
+    background-size: 200%;
+}
+.button::before{
+    content: "";
+    background:linear-gradient(to right, #ffb600, #fff600, #a5ff00, #15acf8);
+    background-size: 200%;
+    position: absolute;
+    border-radius: 5em;
+    top: -.5em;
+    left: -.5em;
+    right: -.5em;
+    bottom: -.5em;
+    z-index: -1;
+    opacity: 0;
+}
+
+.button:hover{
+    animation: time .5s infinite;
+    animation-direction: alternate;
+}
+.button:hover::before{
+    animation: time .5s infinite;
+    animation-direction: alternate;
+    opacity: .8;
+    filter: blur(.5em);
+}
+@keyframes time{
+    from{
+        background-position: 0;
+    }
+    to{
+        background-position: 100%;
+    }
+}
+

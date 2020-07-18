@@ -1,10 +1,6 @@
-body{
-    background-color: #2c3e50;
-}
+
 .button {
     position: relative;
-    font-size: 1.5rem;
-    padding: 1em 3em;
     /* letter-spacing: .2em; */
     background: #1f4037; /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #99f2c8, #1f4037); /* Chrome 10-25, Safari 5.1-6 */

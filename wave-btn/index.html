@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>涟漪按钮</title>
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+    <a class="button" href="#">涟漪按钮
+        <div class="deco"></div>
+    </a>
+</body>
+<script>
+    $('.button').click((e)=>{
+        $('.deco').addClass('water');
+        //e.clientX：距离浏览器可视区域X方向的距离
+        //e.target.offsetLeft父元素的左上角离页面左上角的距离
+        //设置涟漪生成的位置
+        let x=e.clientX-e.target.offsetLeft;
+        let y=e.clientY-e.target.offsetTop;
+        $('.water').css({'left':`${x}px`,'top':`${y}px`});
+        setTimeout(() => {
+            $('.deco').removeClass('water');
+        }, 1000);
+    })
+</script>
+</html>

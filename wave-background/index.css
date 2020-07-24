@@ -1,0 +1,52 @@
+.container{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: #dcdde1;
+    overflow: hidden;
+}
+
+.container .wave{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #487eb0;
+    /* 把原点移到中心 */
+    transform: translate(-50%,-50%);
+}
+
+.wave-in{
+    animation-name: in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.wave-out{
+    animation-name: out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes in{
+    from{
+        width: 0;
+        height: 0;
+    }
+    to{
+        width: 300%;
+        height: 300%;
+    }
+}
+
+
+@keyframes out{
+    from{
+        width: 300%;
+        height: 300%;
+    }
+    to{
+        width: 0;
+        height: 0;
+    }
+}

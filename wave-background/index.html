@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3d图片旋转</title>
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="../jquery.min.js"></script>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <span class="wave"></span>
+    </div>
+</body>
+<script>
+    $('.container').on('mouseenter',(e)=>{
+        let x=e.clientX-e.target.offsetLeft;
+        let y=e.clientY-e.target.offsetTop;
+        $('.wave').css({'left':x+'px','top':y+'px'})
+        $('.wave').removeClass('wave-out');
+        $('.wave').addClass('wave-in');
+
+    })
+    $('.container').on('mouseleave',(e)=>{
+        let x=e.clientX-e.target.offsetLeft;
+        let y=e.clientY-e.target.offsetTop;
+        $('.wave').css({'left':x+'px','top':y+'px'})
+        $('.wave').removeClass('wave-in');
+        $('.wave').addClass('wave-out');
+    })
+</script>
+</html>

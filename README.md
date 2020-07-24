@@ -7,3 +7,4 @@
 - carousel-img(图片轮播)
 - 3d-interactive-cube(3d可鼠标交互旋转立方体)
 - book-rotate(模仿书翻页)
+- wave-background(波浪背景动态出入)

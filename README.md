@@ -9,3 +9,4 @@
 - book-rotate(模仿书翻页)
 - wave-background(波浪背景动态出入)
 - wave-shadow-btn(shadow做按钮波浪背景)
+- time-btn-rotate(旋转的流光按钮)

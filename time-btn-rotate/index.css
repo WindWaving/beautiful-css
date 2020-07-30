@@ -1,0 +1,50 @@
+body{
+    /* 黑色或白色，不然hue-rotate会改变颜色 */
+    background: black;
+}
+.time-rotate-btn{
+    position: relative;
+    padding: 5rem 2.5rem;
+    font-size: 2rem;
+    border-radius: 50%;
+    color: white;
+    background: linear-gradient(45deg, transparent,transparent 40%, rgba(247, 215, 148,0.8));
+    animation: rotate-time 1s linear infinite;
+}
+
+
+.time-rotate-btn::before{
+    content: "";
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    right: .5rem;
+    bottom: .5rem;
+    border-radius: 50%;
+    background: black;
+    z-index: 2;
+}
+
+.time-rotate-btn::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: linear-gradient(45deg, transparent,transparent 40%, rgba(247, 215, 148,.8));
+    filter: blur(2rem);
+    z-index: 1;
+}
+
+@keyframes rotate-time{
+    0%{
+        transform: rotateZ(0deg);
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+        filter: hue-rotate(360deg);
+    }
+}

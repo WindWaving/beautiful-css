@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    width: 100%;
+}
+body{
+    min-height: 1500px;
+    background: #0a2a43;
+}
+.container{
+    width: 100%;
+}
+
+.parallax-wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.parallax-box{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.parallax-box .parallax-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.parallax-box #road{
+    z-index: 2;
+}
+.parallax-box::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a2a43;
+    mix-blend-mode: color;
+    z-index: 1000;
+}
+
+.parallax-box::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #0a2a43,transparent);
+    z-index: 10000;
+}
+
+.parallax-box .parallax-text{
+    color: white;
+    z-index: 1;
+    font-size: 10rem;
+}

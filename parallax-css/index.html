@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS视差</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="parallax-wrap">
+            <div class="parallax-box">
+                <img src="imgs/bg.jpg" alt="" id="bg" class="parallax-img">
+                <img src="imgs/moon.png" alt="" id="moon" class="parallax-img">
+                <img src="imgs/mountain.png" alt="" id="mountain" class="parallax-img">
+                <img src="imgs/road.png" alt="" id="road" class="parallax-img">
+                <h1 id="title" class="parallax-text">MOON Light</h1>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script>
+    window.addEventListener('scroll',()=>{
+        let scrollY=window.scrollY;
+        $('#bg').css({'top':`${0.2*scrollY}px`})
+        $('#mountain').css({'top':`-${0.3*scrollY}px`})
+        $('#road').css({'top':`${0.1*scrollY}px`})
+        $('#title').css({'top':`${1*scrollY}px`})
+        $('#moon').css({'left':`-${0.5*scrollY}px`})
+    })
+</script>
+</html>
